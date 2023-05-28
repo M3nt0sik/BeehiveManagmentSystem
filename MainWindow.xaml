@@ -21,15 +21,15 @@
         <Label Grid.Column="1" Content="Raport dla Królowej" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
         <TextBox x:Name="statusReport" Grid.Column="1" Margin="20,10,20,45" Grid.Row="1" TextWrapping="Wrap" Grid.RowSpan="2" Height="NaN" IsReadOnly="True" BorderThickness="2,2,2,2"/>
         <StackPanel Grid.Row="1" VerticalAlignment="Top" Margin="20">
-            <ComboBox Grid.Row="1" VerticalAlignment="Top" Margin="0,0,0,20" FontSize="18">
-                <ListBoxItem Content="Zbieraczka nektaru"/>
-                <ListBoxItem Content="Producentka miodu"/>
-                <ListBoxItem Content="Opiekunka jaj"/>
+            <ComboBox Name="jobSelector" Grid.Row="1" VerticalAlignment="Top" Margin="0,0,0,20" FontSize="18">
+                <ListBoxItem Content="NectarCollector"/>
+                <ListBoxItem Content="HoneyManufacturer"/>
+                <ListBoxItem Content="EggCare"/>
 
             </ComboBox>
-            <Button Content="Przydziel funkcje pszczole"  Grid.Row="1" VerticalAlignment="Top" FontSize="18"/>
+            <Button Content="Przydziel funkcje pszczole"  Grid.Row="1" VerticalAlignment="Top" FontSize="18" Click="AssignJob_Click"/>
         </StackPanel>
-        <Button Content="Nastepna zmiana" Grid.Row="2" FontSize="18" Margin="20,20,20,20"/>
+        <Button Content="Nastepna zmiana" Grid.Row="2" FontSize="18" Margin="20,20,20,20" Click="WorksShift_Click"/>
 
 
     </Grid>
