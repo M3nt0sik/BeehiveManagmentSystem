@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeehiveManagmentSystem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="System zarządzania rojem" Height="325" Width="625">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Przydzialane funkcje" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        
+        <Label Grid.Column="1" Content="Raport dla Królowej" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="statusReport" Grid.Column="1" Margin="20,10,20,45" Grid.Row="1" TextWrapping="Wrap" Grid.RowSpan="2" Height="NaN" IsReadOnly="True" BorderThickness="2,2,2,2"/>
+        <StackPanel Grid.Row="1" VerticalAlignment="Top" Margin="20">
+            <ComboBox Grid.Row="1" VerticalAlignment="Top" Margin="0,0,0,20" FontSize="18">
+                <ListBoxItem Content="Zbieraczka nektaru"/>
+                <ListBoxItem Content="Producentka miodu"/>
+                <ListBoxItem Content="Opiekunka jaj"/>
+
+            </ComboBox>
+            <Button Content="Przydziel funkcje pszczole"  Grid.Row="1" VerticalAlignment="Top" FontSize="18"/>
+        </StackPanel>
+        <Button Content="Nastepna zmiana" Grid.Row="2" FontSize="18" Margin="20,20,20,20"/>
+
 
     </Grid>
 </Window>
