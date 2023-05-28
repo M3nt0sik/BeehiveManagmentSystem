@@ -10,7 +10,7 @@ namespace BeehiveManagmentSystem
     {
         private static float NECTAR_CONVERSION_RATIO = .19f;
         private static float LOW_LEVEL_RATIO = 10f;
-        private static float honey = 10f;
+        private static float honey = 15f;
         private static float nectar = 100f;
 
         public static void ConvertNectarT0Honey(float amount)

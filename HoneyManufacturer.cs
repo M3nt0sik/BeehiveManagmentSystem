@@ -13,7 +13,7 @@ namespace BeehiveManagmentSystem
         public HoneyManufacturer() : base("HoneyManufacturer") { }
         protected override void DoJob()
         {
-            HoneyVault.CollectNectar(NECTAR_PROCES_PER_SHIFT);
+            HoneyVault.ConvertNectarT0Honey (NECTAR_PROCES_PER_SHIFT);
         }
     }
 }
