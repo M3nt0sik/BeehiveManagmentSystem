@@ -8,8 +8,8 @@ namespace BeehiveManagmentSystem
 {
     internal class Bee
     {
-        private string job; 
-        protected float CostPerShift { get; }
+        public string job { get; private set; } 
+        protected virtual float CostPerShift { get; }
 
         public Bee(string job)
         {
