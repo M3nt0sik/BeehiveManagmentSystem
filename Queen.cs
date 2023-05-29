@@ -15,10 +15,11 @@ namespace BeehiveManagmentSystem
         public string StatusReport { get; private set; }
 
         protected override float CostPerShift { get; } = 2.14f;
-        private Bee[] Workers = new Bee[0];
+        private Bee[] Workers = new Bee[1];
         public Queen():base("Queen") 
         {
-            AssignBee("EggCare");
+            //AssignBee("EggCare");
+            Workers[0] = new EggCare(this);
             AssignBee("NectarCollector");
             AssignBee("HoneyManufacturer");
 
@@ -38,7 +39,7 @@ namespace BeehiveManagmentSystem
                                    $"\nLiczba jaj: {eggs:0.0}" +
                                    $"\nNieprzydzielone robotnice: {unassignedWorkers:0.0}" +
                                    $"\n{WorkerStatus("NectarCollector")}\n{WorkerStatus("HoneyManufacturer")}" +
-                                   $"\n{WorkerStatus("NectarCollector")}\nRobotnice w sumie: {Workers.Length}";
+                                   $"\n{WorkerStatus("EggCare")}\nRobotnice w sumie: {Workers.Length}";
                 }
         public void CareOfEggs(float eggsToConvert)
                 {

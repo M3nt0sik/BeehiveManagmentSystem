@@ -11,7 +11,7 @@ namespace BeehiveManagmentSystem
         protected override float CostPerShift { get; } = 1.95f;
         public const float NECTAR_COLECTED_PER_SHIFT = 32.25f;
 
-        public NectarCollector() : base("NectarCollectro") { }
+        public NectarCollector() : base("NectarCollector") { }
 
         protected override void DoJob()
         {
