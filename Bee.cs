@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace BeehiveManagmentSystem
 {
-    internal class Bee
+    internal class Bee: IWorker
     {
-        public string job { get; private set; } 
+        public string Job { get; private set; } 
         protected virtual float CostPerShift { get; }
 
         public Bee(string job)
         {
-            this.job = job;
+            this.Job = job;
         }
 
         public void TheNextShift()

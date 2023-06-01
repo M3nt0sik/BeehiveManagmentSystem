@@ -15,7 +15,7 @@ namespace BeehiveManagmentSystem
         public string StatusReport { get; private set; }
 
         protected override float CostPerShift { get; } = 2.14f;
-        private Bee[] Workers = new Bee[1];
+        private IWorker[] Workers = new IWorker[1];
         public Queen():base("Queen") 
         {
             //AssignBee("EggCare");
@@ -24,7 +24,7 @@ namespace BeehiveManagmentSystem
             AssignBee("HoneyManufacturer");
 
         }
-        private void AddWorker(Bee worker)
+        private void AddWorker(IWorker worker)
                {
                    if(unassignedWorkers >= 1)
                     {
@@ -55,7 +55,7 @@ namespace BeehiveManagmentSystem
             int count = 0;
             foreach (Bee worker in Workers)
             {
-                if (worker.job == job) count++;
+                if (worker.Job == job) count++;
             }
             return $"{job}: {count}";
         }
@@ -81,7 +81,7 @@ namespace BeehiveManagmentSystem
       
         protected override void DoJob()
         {
-            foreach(Bee worker in Workers)
+            foreach(IWorker worker in Workers)
             {
                 worker.TheNextShift();
             }

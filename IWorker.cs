@@ -10,7 +10,7 @@ namespace BeehiveManagmentSystem
     {
        string Job { get; }
 
-       void WorkTheNextShift();
+       void TheNextShift();
 
 
     }
